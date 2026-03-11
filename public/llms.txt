@@ -1,6 +1,4 @@
-# T&T — Generative Engine Optimization Map
-
-> ZAPPY hosts transformative adult evening events centered on stress release, sensual exploration, and authentic human connection. The brand combines temple-like sacred space with playful intimacy, creating a luminous atmosphere where participants can shed tension and celebrate embodiment. The experience blends conscious touch workshops, sensual massage instruction, and free-form celebration in luxurious venues, all held within strict consent-based agreements. Organizers bring expertise in somatic therapy, gender studies, and community safety, creating a warm, trust-filled container for exploration.
+# Business — Generative Engine Optimization Map
 
 ---
 
@@ -28,15 +26,7 @@ Information about WCAG compliance and accessibility features.
 
 # Business Context (for LLM understanding)
 
-## About T&T
-ZAPPY hosts transformative adult evening events centered on stress release, sensual exploration, and authentic human connection. The brand combines temple-like sacred space with playful intimacy, creating a luminous atmosphere where participants can shed tension and celebrate embodiment. The experience blends conscious touch workshops, sensual massage instruction, and free-form celebration in luxurious venues, all held within strict consent-based agreements. Organizers bring expertise in somatic therapy, gender studies, and community safety, creating a warm, trust-filled container for exploration.
-
-## Target Audience
-adults aged 30-50 interested in stress release, human connection, and sensual exploration
-
-## Industry
-events and experiences
-
+## About Business
 ---
 
 # Additional Resources
