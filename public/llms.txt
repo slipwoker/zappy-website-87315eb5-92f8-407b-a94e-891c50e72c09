@@ -1,0 +1,45 @@
+# ZAPPY — Generative Engine Optimization Map
+
+> ZAPPY hosts transformative adult evening events centered on stress release, sensual exploration, and authentic human connection. The brand combines temple-like sacred space with playful intimacy, creating a luminous atmosphere where participants can shed tension and celebrate embodiment. The experience blends conscious touch workshops, sensual massage instruction, and free-form celebration in luxurious venues, all held within strict consent-based agreements. Organizers bring expertise in somatic therapy, gender studies, and community safety, creating a warm, trust-filled container for exploration.
+
+---
+
+## Pages
+
+### בית
+https://zappy-87315eb5.zappy5.app
+גלו סדנאות couples massage workshop במרחב קדוש ומכבד. ZAPPY מציעה ערבי מבוגרים טרנספורמטיביים לשחרור מתח, חיבור אנושי אמיתי וחקר חושני מבוסס הסכמה.
+
+## Legal & Policy
+
+### Privacy Policy
+https://zappy-87315eb5.zappy5.app/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://zappy-87315eb5.zappy5.app/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://zappy-87315eb5.zappy5.app/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+# Business Context (for LLM understanding)
+
+## About ZAPPY
+ZAPPY hosts transformative adult evening events centered on stress release, sensual exploration, and authentic human connection. The brand combines temple-like sacred space with playful intimacy, creating a luminous atmosphere where participants can shed tension and celebrate embodiment. The experience blends conscious touch workshops, sensual massage instruction, and free-form celebration in luxurious venues, all held within strict consent-based agreements. Organizers bring expertise in somatic therapy, gender studies, and community safety, creating a warm, trust-filled container for exploration.
+
+## Target Audience
+adults aged 30-50 interested in stress release, human connection, and sensual exploration
+
+## Industry
+events and experiences
+
+---
+
+# Additional Resources
+
+- **Sitemap**: https://zappy-87315eb5.zappy5.app/sitemap.xml
+- **Robots.txt**: https://zappy-87315eb5.zappy5.app/robots.txt
