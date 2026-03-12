@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 /* Self-hosted fonts (Inter + Rubik for multi-language support) */
 
@@ -161,9 +161,12 @@
   --gradient-overlayLight: linear-gradient(180deg, rgba(255,248,242,0.85) 0%, rgba(255,248,242,0.35) 55%, rgba(255,248,242,0.00) 100%);
   
   --font-heading: Fraunces, ui-serif, Georgia, serif;
-  --font-body: Manrope, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-body: 'Inter', sans-serif;
   --nav-overlay-opacity: 0.35;
-}
+
+  --body-font: 'Inter', sans-serif;
+  --font-family: 'Inter', sans-serif;
+  --font-primary: 'Inter', sans-serif;}
 
 * {
   margin: 0;
@@ -180,7 +183,7 @@ html {
 body {
   font-size: 16px !important;
   line-height: 1.7 !important;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: var(--text-dark);
   background-color: var(--bg-light);
   -webkit-font-smoothing: antialiased;
