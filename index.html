@@ -1057,246 +1057,360 @@
 
 
 
-<section style="width: 100%; max-width: 100%; box-sizing: border-box; position: relative; min-height: 100vh; background: linear-gradient(135deg, var(--bg-dark) 0%, #1a0f26 50%, var(--bg-dark) 100%); overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 120px 20px 80px;" data-zappy-section="true" class="section" id="layout-1773263803037">
+<section style="position: relative; width: 100%; max-width: 100%; box-sizing: border-box; background: linear-gradient(135deg, var(--bg-dark) 0%, #1a0f28 100%); padding: 120px 0 80px; overflow: hidden; font-family: var(--font-body);" data-zappy-section="true" class="section" id="layout-1773263803037">
   <style>
-    @keyframes floatIcon {
-      0%, 100% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-20px) rotate(5deg); }
-    }
-    
-    @keyframes pulseGlow {
-      0%, 100% { box-shadow: 0 0 30px rgba(185, 166, 255, 0.3); }
-      50% { box-shadow: 0 0 60px rgba(185, 166, 255, 0.6); }
-    }
-    
-    @keyframes fadeSlideIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
-    .ritual-container {
+    .timeline-section-container {
       max-width: 1200px;
-      width: 100%;
+      margin: 0 auto;
+      padding: 0 20px;
       position: relative;
-      z-index: 10;
+      z-index: 2;
     }
-    
-    .ritual-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 40px;
-      position: relative;
-    }
-    
-    .ritual-card {
-      background: linear-gradient(135deg, rgba(185, 166, 255, 0.1) 0%, rgba(255, 134, 188, 0.1) 100%);
-      border: 2px solid var(--border-dark);
-      border-radius: 30px;
-      padding: 50px 40px;
-      position: relative;
-      transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-      backdrop-filter: blur(10px);
-      animation: fadeSlideIn 0.8s ease-out forwards;
+
+    .timeline-title {
+      text-align: center;
+      margin-bottom: 100px;
       opacity: 0;
+      animation: fadeInUp 1s ease forwards;
     }
-    
-    .ritual-card:nth-child(1) { animation-delay: 0.1s; }
-    .ritual-card:nth-child(2) { animation-delay: 0.2s; }
-    .ritual-card:nth-child(3) { animation-delay: 0.3s; }
-    .ritual-card:nth-child(4) { animation-delay: 0.4s; }
-    
-    .ritual-card:hover {
-      transform: translateY(-15px) scale(1.03);
-      border-color: var(--primary);
-      background: linear-gradient(135deg, rgba(185, 166, 255, 0.2) 0%, rgba(255, 134, 188, 0.2) 100%);
-      animation: pulseGlow 2s ease-in-out infinite;
+
+    .timeline-title h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      color: var(--text-light);
+      margin: 0;
+      font-weight: 700;
+      text-shadow: 0 4px 20px rgba(185, 166, 255, 0.3);
     }
-    
-    .icon-wrapper {
-      width: 100px;
-      height: 100px;
-      margin: 0 auto 30px;
+
+    .timeline-wrapper {
+      position: relative;
+      padding: 40px 0;
+    }
+
+    .timeline-line {
+      position: absolute;
+      right: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+      border-radius: 2px;
+      transform: translateX(50%);
+      box-shadow: 0 0 20px rgba(185, 166, 255, 0.5);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 120px;
+      opacity: 0;
+      animation: slideInTimeline 0.8s ease forwards;
+    }
+
+    .timeline-item:nth-child(1) { animation-delay: 0.2s; }
+    .timeline-item:nth-child(2) { animation-delay: 0.4s; }
+    .timeline-item:nth-child(3) { animation-delay: 0.6s; }
+    .timeline-item:nth-child(4) { animation-delay: 0.8s; }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+      margin-right: calc(50% + 60px);
+      text-align: left;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+      margin-left: calc(50% + 60px);
+      text-align: right;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      right: 50%;
+      top: 30px;
+      width: 24px;
+      height: 24px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 50%;
+      transform: translate(50%, -50%);
+      box-shadow: 0 0 0 8px rgba(185, 166, 255, 0.2), 0 0 30px rgba(185, 166, 255, 0.6);
+      z-index: 3;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .timeline-icon {
+      position: absolute;
+      right: 50%;
+      top: 30px;
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, var(--bg-dark), #3a2751);
+      border-radius: 50%;
+      transform: translate(50%, -50%);
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-      border-radius: 50%;
-      position: relative;
-      animation: floatIcon 4s ease-in-out infinite;
+      border: 3px solid var(--primary);
+      box-shadow: 0 8px 30px rgba(185, 166, 255, 0.4);
+      z-index: 4;
+      transition: all 0.4s ease;
     }
-    
-    .ritual-card:nth-child(2) .icon-wrapper { animation-delay: 0.5s; }
-    .ritual-card:nth-child(3) .icon-wrapper { animation-delay: 1s; }
-    .ritual-card:nth-child(4) .icon-wrapper { animation-delay: 1.5s; }
-    
-    .icon-wrapper::before {
+
+    .timeline-item:hover .timeline-icon {
+      transform: translate(50%, -50%) scale(1.2) rotate(360deg);
+      box-shadow: 0 12px 40px rgba(255, 134, 188, 0.6);
+    }
+
+    .timeline-icon svg {
+      width: 35px;
+      height: 35px;
+      fill: var(--primary);
+      transition: fill 0.3s ease;
+    }
+
+    .timeline-item:hover .timeline-icon svg {
+      fill: var(--secondary);
+    }
+
+    .timeline-content {
+      background: linear-gradient(135deg, rgba(185, 166, 255, 0.1), rgba(255, 134, 188, 0.05));
+      padding: 35px 40px;
+      border-radius: 20px;
+      border: 2px solid var(--border-dark);
+      backdrop-filter: blur(10px);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .timeline-content::before {
       content: '';
       position: absolute;
-      inset: -10px;
-      border-radius: 50%;
-      border: 2px solid var(--primary);
-      opacity: 0.3;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: -1;
     }
-    
-    .ritual-card h3 {
+
+    .timeline-item:hover .timeline-content {
+      transform: translateY(-8px);
+      border-color: var(--primary);
+      box-shadow: 0 20px 60px rgba(185, 166, 255, 0.3);
+    }
+
+    .timeline-item:hover .timeline-content::before {
+      opacity: 0.15;
+    }
+
+    .timeline-content h3 {
       font-family: var(--font-heading);
-      font-size: 32px;
-      font-weight: 700;
+      font-size: clamp(1.5rem, 3vw, 2rem);
       color: var(--text-light);
-      text-align: center;
-      margin: 0 0 20px;
+      margin: 0 0 15px 0;
+      font-weight: 600;
       line-height: 1.3;
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     }
-    
-    .ritual-number {
+
+    .timeline-number {
       position: absolute;
-      top: -20px;
-      right: 30px;
-      width: 60px;
-      height: 60px;
-      background: var(--gradient-primary);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      top: -15px;
+      left: 20px;
       font-family: var(--font-heading);
-      font-size: 28px;
+      font-size: 5rem;
       font-weight: 700;
-      color: var(--text-light);
-      box-shadow: 0 10px 30px rgba(230, 30, 140, 0.4);
+      color: rgba(185, 166, 255, 0.1);
+      line-height: 1;
+      z-index: 0;
     }
-    
-    .bg-ornament {
+
+    .timeline-item:nth-child(even) .timeline-number {
+      left: auto;
+      right: 20px;
+    }
+
+    .floating-shapes {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .floating-shape {
       position: absolute;
       border-radius: 50%;
-      opacity: 0.1;
-      pointer-events: none;
+      background: radial-gradient(circle, rgba(185, 166, 255, 0.2), transparent);
+      animation: float 20s ease-in-out infinite;
     }
-    
-    .ornament-1 {
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
-      top: -100px;
-      left: -100px;
-      z-index: 0;
-    }
-    
-    .ornament-2 {
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, var(--secondary) 0%, transparent 70%);
-      bottom: -150px;
-      right: -150px;
-      z-index: 0;
-    }
-    
-    .ornament-3 {
+
+    .floating-shape:nth-child(1) {
       width: 300px;
       height: 300px;
-      background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 0;
+      top: 10%;
+      left: 5%;
+      animation-delay: 0s;
     }
-    
-    @media (max-width: 968px) {
-      .ritual-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+
+    .floating-shape:nth-child(2) {
+      width: 200px;
+      height: 200px;
+      top: 60%;
+      right: 10%;
+      animation-delay: 5s;
+    }
+
+    .floating-shape:nth-child(3) {
+      width: 250px;
+      height: 250px;
+      bottom: 20%;
+      left: 15%;
+      animation-delay: 10s;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
       }
-      
-      .ritual-card {
-        padding: 40px 30px;
-      }
-      
-      .ritual-card h3 {
-        font-size: 28px;
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
-    
+
+    @keyframes slideInTimeline {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 0 0 8px rgba(185, 166, 255, 0.2), 0 0 30px rgba(185, 166, 255, 0.6);
+      }
+      50% {
+        box-shadow: 0 0 0 16px rgba(185, 166, 255, 0.1), 0 0 40px rgba(185, 166, 255, 0.8);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translate(0, 0) scale(1);
+      }
+      33% {
+        transform: translate(30px, -30px) scale(1.1);
+      }
+      66% {
+        transform: translate(-20px, 20px) scale(0.9);
+      }
+    }
+
     @media (max-width: 768px) {
-      section {
-        padding-top: 100px;
-        padding-bottom: 60px;
+      .timeline-section-container {
+        padding: 0 15px;
       }
-      
-      .ritual-card {
-        padding: 35px 25px;
+
+      .timeline-line {
+        right: 30px;
+        transform: none;
       }
-      
-      .icon-wrapper {
-        width: 80px;
-        height: 80px;
-        margin-bottom: 25px;
+
+      .timeline-item:nth-child(odd) .timeline-content,
+      .timeline-item:nth-child(even) .timeline-content {
+        margin-right: 0;
+        margin-left: 0;
+        padding-left: 80px;
+        text-align: right;
       }
-      
-      .ritual-card h3 {
-        font-size: 24px;
+
+      .timeline-dot {
+        right: 30px;
+        transform: translate(0, -50%);
       }
-      
-      .ritual-number {
-        width: 50px;
-        height: 50px;
-        font-size: 22px;
-        top: -15px;
-        right: 20px;
+
+      .timeline-icon {
+        right: 30px;
+        transform: translate(0, -50%);
+      }
+
+      .timeline-item:hover .timeline-icon {
+        transform: translate(0, -50%) scale(1.15) rotate(360deg);
+      }
+
+      .timeline-number {
+        font-size: 3rem;
+      }
+
+      .timeline-item {
+        margin-bottom: 80px;
       }
     }
   </style>
-  
-  <div class="bg-ornament ornament-1"></div>
-  <div class="bg-ornament ornament-2"></div>
-  <div class="bg-ornament ornament-3"></div>
-  
-  <div class="ritual-container">
-    <div class="ritual-grid">
-      <div class="ritual-card">
-        <div class="ritual-number">1</div>
-        <div class="icon-wrapper">
-          <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-            <circle cx="9" cy="7" r="4"></circle>
-            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-          </svg>
+
+  <div class="floating-shapes">
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+  </div>
+
+  <div class="timeline-section-container">
+    <div class="timeline-wrapper">
+      <div class="timeline-line"></div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-9h10v2H7z"></path></svg>
         </div>
-        <h3>מינגלינג, היכרות וכיבוד</h3>
-      </div>
-      
-      <div class="ritual-card">
-        <div class="ritual-number">2</div>
-        <div class="icon-wrapper">
-          <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="12" y1="8" x2="12" y2="12"></line>
-            <line x1="12" y1="16" x2="12.01" y2="16"></line>
-          </svg>
+        <div class="timeline-content">
+          <span class="timeline-number">01</span>
+          <h3>מינגלינג, היכרות וכיבוד</h3>
         </div>
-        <h3>מעגל פתיחה - היכרות והסכמות המרחב</h3>
       </div>
-      
-      <div class="ritual-card">
-        <div class="ritual-number">3</div>
-        <div class="icon-wrapper">
-          <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-          </svg>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path></svg>
         </div>
-        <h3>סדנת עיסויים חושניים</h3>
-      </div>
-      
-      <div class="ritual-card">
-        <div class="ritual-number">4</div>
-        <div class="icon-wrapper">
-          <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-          </svg>
+        <div class="timeline-content">
+          <span class="timeline-number">02</span>
+          <h3>מעגל פתיחה - היכרות והסכמות המרחב</h3>
         </div>
-        <h3>מסיבת מיניות חופשית</h3>
       </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+        </div>
+        <div class="timeline-content">
+          <span class="timeline-number">03</span>
+          <h3>סדנת עיסויים חושניים</h3>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"></path></svg>
+        </div>
+        <div class="timeline-content">
+          <span class="timeline-number">04</span>
+          <h3>מסיבת מיניות חופשית</h3>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
