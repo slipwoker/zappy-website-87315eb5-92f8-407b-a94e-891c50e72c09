@@ -4126,6 +4126,245 @@ nav.navbar {
 }
 }
 
+/* Added Component Styles */
+.event-schedule-section {
+  padding: 4rem 1.5rem;
+  background: linear-gradient(135deg, #faf8ff 0%, #fff 100%);
+  font-family: Fraunces, ui-serif, Georgia, serif;
+  direction: rtl;
+}
+
+.schedule-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.schedule-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.schedule-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.schedule-title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  right: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+}
+
+.schedule-timeline {
+  position: relative;
+  padding-right: 2rem;
+}
+
+.schedule-timeline::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--primary) 0%, rgba(185, 166, 255, 0.3) 100%);
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-right: 2.5rem;
+  margin-bottom: 2.5rem;
+  transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: translateX(-5px);
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  right: -0.5rem;
+  top: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  background: var(--primary);
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(185, 166, 255, 0.4);
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-marker {
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(185, 166, 255, 0.6);
+}
+
+.timeline-content {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.timeline-time {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.5rem 0;
+}
+
+.timeline-description {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #4a4a4a;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.schedule-image-wrapper {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.schedule-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  min-height: 400px;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+.schedule-image:hover {
+  transform: scale(1.02);
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .event-schedule-section {
+    padding: 5rem 2rem;
+  }
+
+  .schedule-container {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 4rem;
+  }
+
+  .schedule-header {
+    grid-column: 1 / -1;
+  }
+
+  .schedule-title {
+    font-size: 3rem;
+  }
+
+  .timeline-time {
+    font-size: 1.375rem;
+  }
+
+  .timeline-description {
+    font-size: 1.375rem;
+  }
+
+  .schedule-image {
+    min-height: 500px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .event-schedule-section {
+    padding: 6rem 2rem;
+  }
+
+  .schedule-title {
+    font-size: 3.5rem;
+  }
+
+  .timeline-item {
+    margin-bottom: 3rem;
+  }
+
+  .timeline-content {
+    padding: 2rem;
+  }
+
+  .schedule-image {
+    min-height: 600px;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .timeline-item,
+  .timeline-marker,
+  .timeline-content,
+  .schedule-image {
+    transition: none;
+  }
+
+  .timeline-item:hover {
+    transform: none;
+  }
+
+  .timeline-item:hover .timeline-marker {
+    transform: none;
+  }
+
+  .schedule-image:hover {
+    transform: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .timeline-content {
+    border: 2px solid #1a1a1a;
+  }
+
+  .timeline-marker {
+    border-width: 4px;
+  }
+}
+
+/* Focus styles for accessibility */
+.timeline-item:focus-within .timeline-content {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.schedule-image:focus {
+  outline: 3px solid var(--primary);
+  outline-offset: 4px;
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
