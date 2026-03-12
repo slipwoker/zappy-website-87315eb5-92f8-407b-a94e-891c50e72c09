@@ -451,6 +451,277 @@
   }
 }
 </style>
+
+<style data-zappy-section-v2-css="true">
+/* V2 Regenerated Section CSS */
+.index-hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  padding-bottom: 80px;
+}
+
+/* Background Image Layer */
+.index-hero-section .hero-bg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.index-hero-section .hero-bg-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Scrim Overlay for Legibility */
+.index-hero-section .hero-scrim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(185,166,255,0.18) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(230,30,140,0.15) 0%, transparent 50%),
+    linear-gradient(180deg, rgba(43,31,58,0.25) 0%, rgba(43,31,58,0.75) 60%, rgba(43,31,58,0.92) 100%);
+}
+
+/* Content Overlay */
+.index-hero-section .hero-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 24px 60px;
+}
+
+.index-hero-section .hero-container {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  direction: rtl;
+}
+
+/* Text Group */
+.index-hero-section .hero-text-group {
+  margin-bottom: 48px;
+}
+
+.index-hero-section .hero-headline {
+  font-family: 'Fraunces', ui-serif, Georgia, serif;
+  font-size: 72px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--text-light);
+  margin: 0 0 24px 0;
+  text-align: center;
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.4), 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.index-hero-section .hero-subtitle {
+  font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-light);
+  margin: 0;
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.5), 0 1px 4px rgba(0,0,0,0.4);
+}
+
+/* Event Details */
+.index-hero-section .hero-event-details {
+  background: rgba(255,247,255,0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 20px;
+  padding: 32px 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.index-hero-section .detail-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  text-align: right;
+  direction: rtl;
+}
+
+.index-hero-section .detail-row:last-child {
+  margin-bottom: 0;
+}
+
+.index-hero-section .detail-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--primary);
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+.index-hero-section .detail-row span {
+  font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-light);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+.index-hero-section .price-row span {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--accent);
+}
+
+/* CTA Group */
+.index-hero-section .hero-cta-group {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.index-hero-section .btn-hero-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 48px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+  color: #FFFFFF;
+  font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 999px;
+  border: 0;
+  box-shadow: 0 8px 24px rgba(230,30,140,0.35), 0 0 0 0 rgba(230,30,140,0.5);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+}
+
+.index-hero-section .btn-hero-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(230,30,140,0.45), 0 0 0 4px rgba(230,30,140,0.2);
+}
+
+/* Bottom Divider */
+.index-hero-section .index-hero-divider-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.index-hero-section .index-hero-divider-wrapper svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .index-hero-section .hero-headline {
+    font-size: 56px;
+  }
+  
+  .index-hero-section .hero-subtitle {
+    font-size: 20px;
+  }
+  
+  .index-hero-section .hero-event-details {
+    padding: 28px 32px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .index-hero-section {
+    min-height: 100vh;
+    padding-bottom: 60px;
+  }
+  
+  .index-hero-section .hero-content {
+    padding: 100px 16px 40px;
+  }
+  
+  .index-hero-section .hero-text-group {
+    margin-bottom: 32px;
+  }
+  
+  .index-hero-section .hero-headline {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .index-hero-section .hero-subtitle {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  .index-hero-section .hero-event-details {
+    padding: 24px 20px;
+    margin-bottom: 32px;
+    border-radius: 16px;
+  }
+  
+  .index-hero-section .detail-row {
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  
+  .index-hero-section .detail-row span {
+    font-size: 15px;
+  }
+  
+  .index-hero-section .price-row span {
+    font-size: 16px;
+  }
+  
+  .index-hero-section .hero-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .index-hero-section .btn-hero-primary {
+    width: 100%;
+    padding: 16px 32px;
+    font-size: 16px;
+  }
+  
+  .index-hero-section .index-hero-divider-wrapper {
+    height: 60px;
+  }
+}
+</style>
     <link rel="stylesheet" href="/styles.css">
 
     <style id="zappy-dropdown-submenu-styles">
@@ -994,61 +1265,52 @@
 
 
 
-<section class="index-hero-section" data-layout-spec="בית-hero" data-hero-type="fullscreen-scrim" id="zappy-section-0" data-zappy-content-align="top-center" style="--zappy-bg-overlay: rgba(255, 248, 242, 0.62); --zappy-bg-image: url(&quot;assets/business-general-hero-upload-1773252700909.webp&quot;); background-image: linear-gradient(rgba(255, 248, 242, 0.62), rgba(255, 248, 242, 0.62)), url(&quot;assets/business-general-hero-upload-1773252700909.webp&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat; position: relative; overflow: hidden;" data-zappy-bg-type="image" data-zappy-bg-color="" data-zappy-bg-image="assets/business-general-hero-upload-1773252700909.webp" data-zappy-bg-overlay-color="#fff8f2" data-zappy-bg-overlay-opacity="62" data-zappy-bg-video-type="" data-zappy-bg-video-url=""><style data-zappy-align-style="true">#zappy-section-0 > [data-zappy-align-target] { margin-top: 0 !important; margin-bottom: auto !important; margin-left: auto !important; margin-right: auto !important; align-items: flex-start !important; justify-content: center !important; }  @media (max-width: 768px) { #zappy-section-0 > [data-zappy-align-target] { align-items: center !important; justify-content: flex-start !important; margin-top: 0 !important; margin-bottom: auto !important; margin-left: auto !important; margin-right: auto !important; } #zappy-section-0 > [data-zappy-align-target] > * { margin-left: auto !important; margin-right: auto !important; } }</style>
+<section class="index-hero-section" data-layout-spec="בית-hero" data-hero-type="fullscreen-card" data-zappy-section="true" id="zappy-section-0">
   <!-- Background Image Layer -->
-  <img data-hero-bg="true" data-placeholder="index-hero-bg" data-context="Bright, sunlit luxury suite or venue interior with warm natural light streaming through sheer curtains, soft cream and blush tones, elegant modern furniture, plush textures, inviting ambiance that feels safe and welcoming, sophisticated adult space for connection and celebration, professional photography style, high-end hospitality aesthetic" class="index-hero-bg-image zappy-editable-image" width="1920" height="1080" src="/assets/site-index-hero-bg.webp" alt="חלל אירוח יוקרתי מואר באור טבעי" data-element-type="image" data-element-id="img-1773245053439-qc6bap8r2" style="display: none;" data-zappy-original-bg="hidden">
-  
+  <div class="hero-bg-wrapper">
+    <div class="hero-bg-image" role="img" aria-label="חלל אירוח יוקרתי מואר באור טבעי" style="background-image: url('assets/site-index-hero-bg.webp');  background-size: cover; background-position: center;"></div>
+  </div>
+
   <!-- Scrim Overlay for Text Legibility -->
-  <div class="index-hero-scrim" aria-hidden="true" data-zappy-gradient-scrim="true" style="opacity: 1; display: none;" data-zappy-scrim-orig-opacity="" data-zappy-original-bg="hidden"></div>
-  
-  <!-- Content Overlay Group -->
-  <div class="index-hero-content" data-zappy-align-target="true">
-    <div class="index-hero-card">
-      
-      <h3 style="text-align: center"></h3><div class="zappy-inserted-element" id="zappy-element-1773250433580-khwxwg7t3" data-element-id="zappy-element-1773250433580-khwxwg7t3" data-element-type="paragraph" style="margin-left: auto; margin-right: auto; width: 100%; max-width: 559px !important;"><h3 style="text-align: center;" data-element-id="move-1773259824660-55xqfese">&nbsp;</h3><h1 style=""><font color="#991799">מסיבת שחרור</font></h1><p style=""><b>הגוף זוכר הכול.<br>
-את הדריכות, את המתח, את האזעקות.<br>
-אבל הגוף גם יודע להשתחרר.<br>&nbsp;T &amp; T מזמינות אתכן.ם ללילה שבו המתח נמס, החושים מתעוררים, והחיבור האנושי חוזר להיות פשוט וטבעי.&nbsp;&nbsp;</b></p></div>
-      
-      <!-- Event Details Module -->
-      <div class="index-hero-event-module">
-        <div class="index-hero-event-item" style="justify-content: flex-start; width: 100%; text-align: right; margin-left: 0px; margin-right: 0px;">
-          <span class="index-hero-event-label" style=""><font color="#b336b3"><u>מתי?</u></font></span>
-          <span class="index-hero-event-value" style="">יום חמישי, 19.3.26</span>
+  <div class="hero-scrim" aria-hidden="true"></div>
+
+  <!-- Content Overlay -->
+  <div class="hero-content">
+    <div class="hero-container">
+      <div class="hero-text-group">
+        <h1 class="hero-headline">מסיבת שחרור</h1>
+        <h3 class="hero-subtitle">הגוף זוכר הכול.<br>את הדריכות, את המתח, את האזעקות.<br>אבל הגוף גם יודע להשתחרר. T &amp; T מזמינות אתכן.ם ללילה שבו המתח נמס, החושים מתעוררים, והחיבור האנושי חוזר להיות פשוט וטבעי.</h3>
+      </div>
+
+      <div class="hero-event-details">
+        <div class="detail-row">
+          <svg data-no-icon-edit="true" aria-hidden="true" class="detail-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          <span>יום חמישי, 19.3.26</span>
         </div>
-        <div class="index-hero-event-item">
-          <span class="index-hero-event-label" style=""><font color="#b336b3"><u>איפה?</u></font></span>
-          <span class="index-hero-event-value" style="">לופט באיזור קיסריה</span>
+        <div class="detail-row">
+          <svg data-no-icon-edit="true" aria-hidden="true" class="detail-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>לופט באיזור קיסריה</span>
         </div>
-        <div class="index-hero-event-item index-hero-event-format" style="">
-          <span class="index-hero-event-label" style=""><font color="#b336b3"><u>מה?</u></font></span>
-          <span class="index-hero-event-value" style="">סדנת עיסוי אירוטי&nbsp; +<br>מסיבת שחרור ומיניות בטוחה +<br><span style="font-weight: normal;">מוזיקה וריקודים +<br>בריכה וג'קוזי +<br>בר חופשי +<br>כיבוד וארוחת לילה</span></span><span class="index-hero-event-value" style="">&nbsp; &nbsp;</span>
+        <div class="detail-row">
+          <svg data-no-icon-edit="true" aria-hidden="true" class="detail-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>ההרשמה באיזון מגדרי או לנשים סינגליות או לא.נשים סינגלים.יות מקהילת הלהטב"ק הנמשכים לבני המין השני בלבד</span>
         </div>
-        <div class="index-hero-event-item index-hero-event-capacity" style="text-align: right">
-          <span class="index-hero-event-label"><font color="#b336b3"><u>מי?</u></font></span>
-          <span class="index-hero-event-value" style="">גילאי 30-50 (גמישות בקצוות)<br><span style="font-weight: normal;">ההרשמה באיזון מגדרי או לנשים סינגליות או לא.נשים סינגלים.יות מקהילת הלהטב"ק הנמשכים לבני המין השני בלבד</span></span>
+        <div class="detail-row price-row">
+          <svg data-no-icon-edit="true" aria-hidden="true" class="detail-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          <span>מחיר כרטיס לאדם: 300 ש"ח</span>
         </div>
-      </div><div class="zappy-inserted-element" id="zappy-element-1773253408164-8obfubo9q" data-element-id="zappy-element-1773253408164-8obfubo9q" data-element-type="h2" data-zappy-newly-inserted="true" style="margin-left: auto; margin-right: auto; width: 100%; max-width: 559px !important;">מחיר כרטיס לאדם: 300 ש"ח</div><div class="zappy-inserted-element" id="zappy-element-1773252974230-ybuz7u4n7" data-element-id="zappy-element-1773252974230-ybuz7u4n7" data-element-type="paragraph" style="margin-left: auto; margin-right: auto; width: 100%; max-width: 559px !important;">לפני האירוע תיפתח קבוצת וואטסאפ למשתתפים ובה יישלחו כל הפרטים החשובים, כולל המיקום המדויק והסכמות המרחב.&nbsp;הקבוצה תשמש גם לתיאום טרמפים בין המשתתפים.&nbsp;<br>&nbsp;</div>
-      
-      <!-- CTA Row -->
-      <div class="index-hero-cta-row" style="text-align: center !important; display: flex !important; justify-content: center !important; align-items: flex-start !important; width: 100% !important;">
-        <a href="#https://forms.gle/dmoj5BGZA29bovmg6" class="index-hero-btn-primary btn btn-primary" data-element-type="button" data-element-id="btn-1773245053430-p80j5rzd8" data-native-element="true" style="outline: none; border-color: var(--primary-color, var(--primary, #8B0000)) !important; color: rgb(255, 255, 255) !important; background-color: var(--primary-color, var(--primary, #8B0000)) !important; background-image: none !important;">הרשמה לאירוע</a>
-        
+      </div>
+
+      <div class="hero-cta-group">
+        <a href="#https://forms.gle/dmoj5BGZA29bovmg6" class="btn-hero-primary">הרשמה לאירוע</a>
       </div>
     </div>
   </div>
-  
-  <!-- Bottom Divider: Soft Gradient Mist with Temple Arch Contour -->
+
+  <!-- Bottom Divider Transition -->
   <div class="index-hero-divider-wrapper">
-    <svg aria-hidden="true" viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="index-hero-mist-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" style="stop-color:#B9A6FF;stop-opacity:0.25"></stop>
-          <stop offset="50%" style="stop-color:#FF86BC;stop-opacity:0.18"></stop>
-          <stop offset="100%" style="stop-color:#FCFAFF;stop-opacity:0.95"></stop>
-        </linearGradient>
-      </defs>
-      <path d="M0,120 L0,60 Q150,45 300,50 T600,40 Q750,45 900,50 T1200,60 L1200,120 Z" fill="var(--bg-light)"></path>
-      <path d="M0,60 Q150,45 300,50 T600,40 Q750,45 900,50 T1200,60" fill="var(--bg-light)" stroke="var(--primary)" stroke-width="1" opacity="0.4"></path>
+    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,80 L0,45 Q60,38 120,45 T240,42 Q300,48 360,40 T480,45 Q540,42 600,48 T720,40 Q780,45 840,42 T960,48 Q1020,40 1080,45 T1200,42 L1200,80 Z" fill="var(--bg-light)"></path>
     </svg>
   </div>
 </section>
