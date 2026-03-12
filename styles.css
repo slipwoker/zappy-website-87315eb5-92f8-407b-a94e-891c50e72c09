@@ -4120,36 +4120,9 @@ body.accessibility-widget-visible ._access-menu {
 /* /Zappy custom logo size */
 
 
-.home-whats-in-loft-section .zappy-auto-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto;
-  gap: 24px 16px;
-}
-
-.home-whats-in-loft-section .zappy-grid-item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  justify-content: flex-start;
-}
-
-.home-whats-in-loft-section .zappy-grid-item [data-element-type="icon"],
-.home-whats-in-loft-section .zappy-grid-item .zappy-icon-element {
-  flex-shrink: 0;
-}
-
 @media (max-width: 768px) {
-.home-whats-in-loft-section .zappy-auto-grid {
-  grid-template-columns: 1fr;
-  gap: 16px;
-}
-
-.home-whats-in-loft-section .zappy-grid-item {
-  flex-direction: row;
-  align-items: center;
-  gap: 12px;
+nav.navbar {
+  display: none;
 }
 }
 
